@@ -42,6 +42,8 @@ To quickly install this skill, run:
 npx skills@latest add rgopikrishnan91/curious-aristotle-writing-skill
 ```
 
+If you prefer agent-specific instructions, check out below.
+
 ### Claude Code
 
 **Full version (global):**
