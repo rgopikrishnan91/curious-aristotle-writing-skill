@@ -36,6 +36,14 @@ Same 38 rules in a single file. Includes an inline word table, anti-pattern chec
 
 ## Installation
 
+To quickly install this skill, run:
+
+```bash
+npx skills@latest add rgopikrishnan91/curious-aristotle-writing-skill
+```
+
+If you prefer agent-specific instructions, check out below.
+
 ### Claude Code
 
 **Full version (global):**
