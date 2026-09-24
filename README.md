@@ -60,13 +60,30 @@ An explicit output request can shorten the report; it does not skip the repair a
 
 ## Installation
 
-Use the installer:
+### Upload a ZIP
+
+Download and upload **one** of these ready-to-use packages:
+
+| Package | Contents |
+|---|---|
+| [academic-writing.zip](https://github.com/rgopikrishnan91/curious-aristotle-writing-skill/raw/refs/heads/master/dist/academic-writing.zip) (recommended) | Full skill with all six references |
+| [academic-writing-lite.zip](https://github.com/rgopikrishnan91/curious-aristotle-writing-skill/raw/refs/heads/master/dist/academic-writing-lite.zip) | Compact, self-contained skill |
+
+Each package contains exactly one `SKILL.md` and the MIT license. The full package also includes its reference files. Upload the selected ZIP as downloaded.
+
+**Do not upload GitHub's repository-wide "Download ZIP" archive.** It includes both skill versions and produces the error "Zip must contain exactly one SKILL.md file. Currently there are 2."
+
+### Installer
+
+For agents that support the skills installer:
 
 ```bash
 npx skills@latest add rgopikrishnan91/curious-aristotle-writing-skill
 ```
 
-For a manual installation, first clone the repository and enter its directory:
+### Manual installation
+
+First clone the repository and enter its directory:
 
 ```bash
 git clone https://github.com/rgopikrishnan91/curious-aristotle-writing-skill.git
@@ -75,7 +92,7 @@ cd curious-aristotle-writing-skill
 
 The commands below install the full version. Substitute `academic-writing-lite` for `academic-writing` to install the compact version.
 
-### Claude Code
+#### Claude Code
 
 Install globally:
 
@@ -86,7 +103,7 @@ cp -R academic-writing "$HOME/.claude/skills/"
 
 For a project installation, copy the selected skill folder into that project's `.claude/skills/` directory.
 
-### Codex
+#### Codex
 
 Use `CODEX_HOME` when set, with `$HOME/.codex` as the fallback:
 
@@ -95,7 +112,7 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R academic-writing "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-### Gemini
+#### Gemini
 
 ```bash
 mkdir -p "$HOME/.gemini/skills"
@@ -104,6 +121,8 @@ cp -R academic-writing "$HOME/.gemini/skills/"
 
 ## Updating an existing installation
 
+For a ZIP upload, download the updated package for your chosen version and use your app's skill update or replacement flow.
+
 For a manual installation, run the following inside your repository clone:
 
 ```bash
@@ -111,6 +130,17 @@ git pull --ff-only
 ```
 
 Then replace the installed skill folder with the corresponding updated folder from the clone, preserving any local customizations you need. Pulling the repository alone does not update a separately copied installation. The full version no longer uses `references/anti-patterns.md`; replacing the folder also removes that obsolete file.
+
+## Maintaining the ZIP packages
+
+After editing either skill, rebuild the download packages from the repository root with Python 3:
+
+```bash
+python3 scripts/package_skills.py
+python3 scripts/package_skills.py --check
+```
+
+Commit the regenerated `dist/*.zip` files with the source changes. The script rejects missing or duplicate `SKILL.md` files; `--check` detects missing or stale packages without changing them.
 
 ## Sources
 

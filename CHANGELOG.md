@@ -8,6 +8,12 @@
 - Separate hit-list, repaired-text, and verification outputs, with original locations, rule numbers, proposed rewrites, and author-review flags.
 - Explicit checks for claim-first paragraphs and sections, local empirical evidence, table interpretation, terminology, repeated shorthand glosses, em dashes, and document self-references.
 - This changelog and README guidance on version selection, workflows, installation, and updating an existing copy.
+- Separate `dist/academic-writing.zip` and `dist/academic-writing-lite.zip` upload packages, each containing exactly one `SKILL.md` and the MIT license. The full package includes all six reference files.
+- A reproducible packaging script with a `--check` option to detect missing or stale ZIPs.
+
+### Fixed
+
+- ZIP upload instructions now link to individual skill packages. GitHub's repository-wide archive contains two `SKILL.md` files and cannot be uploaded as a single skill.
 
 ### Changed
 
