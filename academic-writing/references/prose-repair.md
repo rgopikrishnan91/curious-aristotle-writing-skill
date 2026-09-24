@@ -1,116 +1,15 @@
----
-name: academic-writing-lite
-description: "Self-contained academic writing rules for formal SE/ML papers and technical chapters, including a complete twelve-failure prose repair audit that preserves meaning. Use when drafting, revising, or editing any paper section, abstract, rebuttal, or pasted prose the user wants tightened or clarified. Trigger on 'revise,' 'rewrite,' 'polish,' 'tighten,' 'clarify,' 'too wordy,' 'make this flow,' or 'fix this.'"
----
-
-# Academic Writing: Compact Rules
-
-## Workflow
-
-For revision, polishing, tightening, or delivery-only repair, read the complete Formal Prose Repair protocol below before editing. Follow its six steps and return the hit list separately from the final text. Preserve the argument, evidence, claims, numbers, citations, scope, uncertainty, and emphasis exactly. Flag meaning-changing repairs for the author instead of applying them.
-
-For new drafting or explicitly requested substantive development, outline the argument, draft claim-first paragraphs and sections, then apply the five global rules and twelve bans below. Keep any substantive suggestions separate from delivery-only repairs. For critique-only requests, report issues without rewriting. Do not force a chapter structure onto an abstract, rebuttal, or short paragraph. This single file contains the full protocol and has no reference-file dependencies.
-
-## Sentences
-
-1. **Prefer active voice.** Make it the default: name the known actor and use a direct verb. Reserve passive voice for an unknown or irrelevant actor, or when active voice would distort the intended focus. Never invent an actor; do not retain avoidable passive voice merely for flow.
-2. **Cut ruthlessly.** Drop empty hedges ("it is important to note that"). Preserve hedges that calibrate claim strength ("may," "suggests"). Conciseness means fewer wasted words, not less substance; cut filler, never cut clarity.
-3. **Use positive form when it preserves the claim.** Preserve meaningful negation: "no evidence of benefit" is not "evidence of no benefit."
-4. **Use sentence endings for new information.** Place new information near the end when useful; do not force emphasis or delay a needed definition.
-5. **Related words together.** Don't interrupt subject-verb with long modifiers.
-6. **Parallel construction** in lists and compound structures.
-7. **No run-ons.** Break up shapeless sentences.
-8. **Use tense deliberately.** Use past for completed work, present for definitions or current interpretations, and future for plans. Shift tense when meaning requires it.
-9. **No em dashes anywhere.** Colons, commas, semicolons, parentheses, or restructure.
-10. **Vary rhythm.** Mix short and long sentences without manufacturing slogans. Allow short parallel sentences when the symmetry itself is the information.
-11. **Unpack nominalizations that hide actions.** Turn hidden actions into verbs when clearer. Keep technical nouns and useful references to prior actions; do not invent agency.
-12. **Connect familiar information to new information.** Usually connect an established topic to new information without overriding claim-first paragraphs or needed definitions.
-13. **Thread topics.** Subjects of consecutive sentences should connect. If first words scatter, restructure.
-
-## Diction
-
-14. **Use concrete wording; reject abstract reframing.** Ban vague labels such as "this is structural" and staged contrasts such as "not technical, but structural." Name the component, constraint, failure, and consequence. Reject unsupported "robust" and similar praise; state the measured property. Preserve established technical names such as "robust regression." Do not infer AI authorship from style.
-15. **Define and gloss terminology.** Define every specialized term at first use. Every ID or shorthand outside its definition needs a 2-6 word gloss at each occurrence. Flag missing definitions rather than inventing them.
-16. **Prevent terminology sprawl.** Pick one term per concept; lock it in for the entire paper. Readers assume two terms mean two things. If they refer to different concepts, define the distinction explicitly.
-17. **Use warranted numerical precision.** Use supported numbers, denominators, units, and conditions. Do not add precision or recompute results during repair; flag missing quantitative support.
-18. **No significance inflation or bare importance assertions.** State supported consequences. Keep superlatives only as checkable factual claims with support.
-
-## Paragraphs
-
-19. **First sentence = core claim of every paragraph.** Include motivation paragraphs. First sentences alone must reconstruct the full argument. Flag reordering that would change meaning or emphasis.
-20. **Preserve emphasis during repair.** Do not add bolding or intensify findings. Use bold strategically only when drafting and when the format permits it.
-21. **Results: lead with the finding.** Give the comparison, number, and citation. When drafting, follow research questions with answer previews. During repair, preserve the selection and emphasis of findings.
-22. **Let paragraph length follow the argument.** Keep one core claim per paragraph.
-23. **Open with the substantive claim.** Lead with the claim appropriate to the section. Avoid generic scene-setting and document narration; do not reopen the domain problem in every section.
-
-## Architecture
-
-24. **Open each section with its core claim.** State it in the first paragraph, beginning with it; then connect motivation, approach, and results.
-25. **Justify consequential methodological decisions.** Explain decisions affecting validity, interpretation, reproducibility, or comparison. Skip routine justifications; flag missing rationale during repair.
-26. **Visible logical structure.** Each step connects to the next.
-27. **Avoid duplicated arguments, not local evidence.** Restate empirical findings with their numbers and citations wherever used. Never substitute section pointers or nicknames for evidence.
-28. **Remove document self-reference.** Make the phenomenon the subject. Keep cross-references only for genuine navigation and report those retained. Paper length is not an exemption.
-29. **Describe the actual contribution at its supported scale.** Use baseline-plus-change explanations when informative. Do not manufacture gaps or discount incremental, replication, negative-result, dataset, or audit contributions.
-30. **Ground gap claims.** Do not assert "underexplored" without evidence. During repair, flag missing support instead of inventing it or silently changing the claim.
-31. **Use examples when they resolve a concrete ambiguity.** Use the simplest example that preserves the difficulty. Use a running example only when helpful. During repair, clarify existing examples without adding content.
-
-## Evidence and Logic
-
-32. **Ground every empirical claim at every occurrence.** Restate the finding, number, and citation with necessary scope and conditions. Flag missing evidence. Prose interprets; tables enumerate. Do not retell tables; include only numbers needed for the interpretation.
-33. **Make the evidence-to-claim connection explicit.** State the relevant finding and why it supports the inference. Name authors when attribution or comparison requires it; avoid name lists.
-34. **Verify citations.** Read and confirm; search when needed for verification. Flag inaccessible sources. During repair, recover existing citations from supplied material, but flag the need for new evidence or changed citations rather than adding them silently.
-35. **Match the inference to the evidence.** Separate measured comparisons from causal explanations. Inspect design, confounding, assumptions, and scope. "May" still needs evidence. Flag unsupported claims without recalibrating them during repair.
-36. **Keep scope local to the claim.** Preserve population, dataset, setting, inclusion criteria, and uncertainty. Flag missing scope rather than guessing.
-
-## Tone
-
-37. **State epistemic status plainly.** Preserve uncertainty and mixed results without defensive framing or certifications of honesty. During repair, flag missing evidence rather than adding results.
-38. **Keep a natural, serious register.** Use connected prose without snark, slogans, stock witticisms, abstract binaries, stacked metaphors, or added emphasis.
-
----
-
-## Wording Diagnostics
-
-Simplify only when the replacement preserves meaning, technical terms, modality, and emphasis.
-
-| Wording | Candidate | Condition |
-|---|---|---|
-| utilize | use | Same action |
-| in order to | to | Same purpose |
-| due to the fact that | because | Causality already stated |
-| is able to | can | Same ability |
-| conducted an investigation of | investigated | Same actor, action, and scope |
-| serves as | is | Identity, not a distinct role |
-
-Reject "robust" as a general compliment; state the supported property, tested condition, or result. Do not substitute "strong" or "reliable" for unsupported praise. Retain established names such as "robust regression" and precisely defined robustness claims with evidence. Replace vague labels such as "this is structural" with the concrete component, constraint, and consequence; preserve exact technical names such as "structural typing." Keep precise technical meanings of "significant," "leverage," "paradigm," and "novel." Flag missing support. "Cutting-edge" to "latest" still requires evidence; "crucial" to "must" changes importance into necessity. Preserve approximations such as "virtually" when they limit the claim.
-
-## Claim Review (When Editing Results/Discussion)
-
-During delivery-only repair, flag substantive claim or evidence problems for the author. Do not automatically weaken, strengthen, or extend the claim.
-
-For each major claim, ask:
-1. **Type?** Descriptive, comparative, causal, generalization?
-2. **Evidence fit?** Does the method support this inference type?
-3. **Scope?** Population, dataset, conditions specified?
-4. **Causal inference earned?** Distinguish a measured comparison from an explanation of what caused it; inspect the design and assumptions.
-5. **Terminology defined?** Vague constructs operationalized?
-6. **Alternatives?** Rival explanations considered?
-7. **What would make this false?** Even if results are true?
-
----
-
-## Formal Prose Repair
+# Formal Prose Repair
 
 Repair the delivery of formal, evidence-driven prose for a demanding technical readership while preserving its meaning exactly. Keep the argument, evidence, claims, numbers, citations, scope, uncertainty, and emphasis unchanged. Do not introduce new claims, new numbers, new metaphors, or new emphasis. If a repair would change meaning, flag it for the author instead of applying it.
 
-### Contents
+## Contents
 
 - [Global rules](#global-rules)
 - [Twelve prose failures](#twelve-prose-failures)
 - [Repair procedure](#repair-procedure)
 - [Separate deliverables](#separate-deliverables)
 
-### Global Rules
+## Global Rules
 
 Apply these rules to every edit.
 
@@ -122,83 +21,83 @@ Apply these rules to every edit.
 
 Treat meaning preservation as the constraint on every repair. Distinguish the author's findings from definitions, procedural descriptions, hypotheses, and statements about what an evaluation did not measure; do not invent a numerical result for a non-result statement. If a qualitative empirical finding has no number, flag the strict numerical requirement as unmet instead of quantifying it. If meeting a global rule would require adding evidence, resolving an ambiguous claim, changing emphasis, or supplying an unsupported definition, retain the affected claim and record the unresolved issue. Do not quietly relax the rule or claim the audit passed. Apply independent safe fixes within a partly ambiguous sentence: an unclear slogan does not prevent removing a detachable "as noted above." Retain only the unresolved content, and record the safe edits and the remaining author decision separately.
 
-### Twelve Prose Failures
+## Twelve Prose Failures
 
 Use the ban numbers below in the hit list. Detect the construction and its function, not just the example words.
 
-#### 1. METADISCOURSE
+### 1. METADISCOURSE
 
 **Find:** Sentences whose subject is the text or the writing act: "this chapter argues," "this section shows," "worth stating," "it deserves a name," or "the table below orients."
 
 **Fix:** Make the phenomenon the subject and delete the self-reference. "The failure that motivates this chapter is not X" becomes "The dangerous failure is not X" only if the danger is already part of the claim; otherwise use "The failure is not X." Preserve genuine descriptions of research actions, such as who measured an outcome. Do not confuse them with commentary on the writing.
 
-#### 2. REGISTER CLASH
+### 2. REGISTER CLASH
 
 **Find:** Casual internet vocabulary or snark in formal prose: "vibe," "listicle," wisecrack metaphors, or dismissive strawman contrasts.
 
 **Fix:** Restore a serious register. If a contrast is needed, contrast against a real alternative and name its concrete cost. Use only an alternative and cost supported by the source; flag missing support rather than inventing either.
 
-#### 3. PERFORMATIVE CANDOR
+### 3. PERFORMATIVE CANDOR
 
 **Find:** Prose certifying its own honesty: "honestly," "frankly," "intellectual honesty demands," "we are transparent about," "and we label it so," or "genuinely."
 
 **Fix:** Delete the certification and state the epistemic status plainly: "Grade three is open" or "the evidence is mixed," when that is the source's status. Preserve uncertainty and limitations without praising the author's candor.
 
-#### 4. SENTENTIA
+### 4. SENTENTIA
 
 **Find:** Aphoristic slogan capstones, especially paired short copular sentences of abstract nouns: "The discipline is the claim. The census is the program."
 
 **Fix:** Merge them into one connected, concrete sentence stating the actual mapping already supported by the passage. Do not guess an unstated mapping. Allow short parallel sentences only when the symmetry itself is the information.
 
-#### 5. TEXTUAL DEIXIS
+### 5. TEXTUAL DEIXIS
 
 **Find:** Pointers to the document or nicknames for earlier facts: "from Section 1," "as noted above," "our second experiment," or "the 83 percent."
 
 **Fix:** Restate the fact in full with its number and citation at the point of use. Recover what was measured and under which conditions from the source. Keep a cross-reference only when navigation is genuinely the point, such as locating a procedure, and never as a substitute for evidence. Record any retained navigation reference in the final verification.
 
-#### 6. SIGNIFICANCE INFLATION
+### 6. SIGNIFICANCE INFLATION
 
 **Find:** Self-ranking praise: "the single most consequential idea," "the strongest result," or "the most famous experiment."
 
 **Fix:** Delete the ranking, state the idea, and show its supported consequence. Retain a superlative only when it is a checkable factual claim with support, such as "the largest effect measured to date for any steering mechanism." Do not replace one unsupported ranking with another.
 
-#### 7. INFLATED ANTITHESIS
+### 7. INFLATED ANTITHESIS
 
 **Find:** A local distinction escalated into a grand abstract binary: "the difference between X and Y is the difference between engineering and wishing." Also catch vague reframings such as "this is structural" or "this is not a technical problem; it is a structural one" when they replace a concrete explanation.
 
 **Fix:** Replace the binary with the concrete consequence of the distinction: what breaks, what it costs, or what a reviewer would catch. State only consequences already supported by the source.
 
-#### 8. METAPHOR STACKING
+### 8. METAPHOR STACKING
 
 **Find:** Two or more figurative images fused in one sentence, especially the author's own coinages, such as "loop," "spine," and "bar" in one clause.
 
 **Fix:** Keep at most one existing metaphor per sentence and state structural claims literally. Named constructs may appear as plain terms but must not be combined into a composite image. Do not introduce a replacement metaphor.
 
-#### 9. HYPOSTATIZATION
+### 9. HYPOSTATIZATION
 
 **Find:** Emotions or abstract states treated as objects, or transformation flourishes applied to them: "convert the gap from an anxiety into line items" or "a mechanism without a gauge is a hope."
 
 **Fix:** State the literal function or consequence: "the gauges measure the gap" or "a mechanism without a gauge is a claim no one can check," if those are the supported meanings. Prefer the concrete measurement or verification function when the surrounding source supplies it. Flag an unclear intended meaning.
 
-#### 10. BARE IMPORTANCE ASSERTION
+### 10. BARE IMPORTANCE ASSERTION
 
 **Find:** Significance declared instead of delivered: "X matters here," "this is important," "crucial," or "cannot be overstated."
 
 **Fix:** Delete the assertion and open with the fact that makes it matter. Keep comparative "matters more/less than" only when both sides are named and substantiated in the same sentence. If the explanatory fact is absent, flag it rather than supply a new rationale.
 
-#### 11. PHANTOM REFERENT
+### 11. PHANTOM REFERENT
 
 **Find:** Abstract summarizing nouns with no antecedent, undefined jargon, or unglossed shorthand: "the whole tradition," "its architecture," "the toolkit," "this program," "the license," unintroduced "etiology," or bare IDs such as "FM-3" outside their definition.
 
 **Fix:** Replace unintroduced abstractions with their concrete referents. Define each specialized term at first use, reuse the same term without synonym drift, and supply a 2-6 word gloss every time an ID or shorthand appears outside its definition. Flag any referent or expansion that cannot be established from the source.
 
-#### 12. SNOWCLONE
+### 12. SNOWCLONE
 
 **Find:** Stock witticism templates with swapped words: "a feature, not an apology" or "X is the new Y."
 
 **Fix:** State the actual claim directly. Do not substitute a different slogan or invent the relationship hidden by the template.
 
-### Repair Procedure
+## Repair Procedure
 
 Complete the following steps in order. Do not edit during the first read or skip the hit list.
 
@@ -213,7 +112,7 @@ Check that a proposed replacement does not simply exchange one banned constructi
 
 Do not treat a keyword scan as proof that all twelve failures are absent. Inspect meaning, antecedents, and paragraph structure. If an unresolved issue prevents compliance, finish the safe repairs and report that limit.
 
-### Separate Deliverables
+## Separate Deliverables
 
 Report the hit list and final text separately. Keep editorial notes outside the repaired prose.
 

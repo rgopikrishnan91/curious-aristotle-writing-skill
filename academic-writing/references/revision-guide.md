@@ -1,84 +1,47 @@
 # Revision Guide
 
-Based on Joseph Williams' diagnostic method. Load when revising existing prose, polishing drafts, or diagnosing why a passage feels off.
+Use these sentence-level diagnostics within the required `prose-repair.md` procedure. Preserve the argument, evidence, claim strength, agency, and emphasis. Treat stylistic techniques as options, not universal transformations.
 
-## The Master Alignment
+## Diagnose the Actual Reading Problem
 
-Clear prose aligns four layers. Misalignment is what makes readers struggle.
-
-| Position | Beginning | End |
+| Symptom | Check | Possible repair |
 |---|---|---|
-| Information | Old / familiar | New / important |
-| Grammar | Subject | Complement |
-| Story | Characters | Their actions |
-| Rhetoric | Topic (what about) | Stress (what matters) |
+| Abstract or indirect prose | Is an action hidden in a noun? Is the actor already known? | Name the known actor and use a verb |
+| Disjointed sentences | Do consecutive subjects refer to connected concepts? | Restore the established topic or a concrete referent |
+| Hard-to-follow clause | Are subject, verb, and modifiers separated? | Move the modifier nearer its target |
+| Buried qualification | Is a condition or limitation detached from the claim? | Place it with the claim without changing its force |
+| Buried paragraph point | Does the opening state the supported core claim? | Move or restate that claim first if meaning and emphasis survive |
 
-**Diagnosis by feel:**
-- *Turgid / abstract* → characters missing from subjects, actions buried in nouns
-- *Disjointed / choppy* → topics shifting randomly, old-new order violated
-- *Anticlimactic / flat* → important information not at the end
+## Active Voice
 
-## Nominalization Patterns
+Make active voice the default whenever the source supplies the actor. Write "the team evaluated the patches" instead of "the patches were evaluated by the team." Keep passive voice only when the actor is unknown or irrelevant, or when naming it first would distort the intended focus. Do not invent an actor to satisfy the preference.
 
-The core problem: action hides in a noun, verb slot filled by an empty verb (is, make, give, conduct, perform).
+## Nominalizations
 
-| Pattern | Before | After |
-|---|---|---|
-| Empty verb + nominalization | conducted an investigation | investigated |
-| "There is" + nominalization | There is a need for review | We must review |
-| Nominalization as subject | The intention of X is to audit | X intends to audit |
-| Consecutive nominalizations | a review of the evolution of | reviewed how X evolved |
+Convert an action noun when the verb is clearer: "the team conducted an investigation" can become "the team investigated." Keep established technical nouns, named constructs, and useful references to earlier actions.
 
-**Where characters hide:** possessive modifiers ("our lack of knowledge" → "we did not know"), objects of prepositions ("on the part of the committee" → make the committee the subject), implied in adjectives, or missing entirely.
+Do not turn "implementation was performed" into "we implemented" unless the source establishes who did the work. Do not turn "there is a need for review" into "we must review" unless both the actor and the obligation are established. Grammar repair must not create agency or stronger modality.
 
-**When nominalizations are fine:** referring back to a previous sentence's action, naming a familiar concept (taxation, freedom), replacing awkward "the fact that," or as shorthand for a repeated concept.
+## Information Flow
 
-## Stress Position Techniques
+Usually connect familiar information to new or more complex information. Keep the first sentence's core claim and define unfamiliar terms when needed. Do not delay a definition merely to place a term at the end.
 
-Six moves for putting the important thing last:
+Use sentence endings to clarify the intended focus, not to intensify every statement. Split a long sentence when it obscures relationships; retain longer sentences when their dependencies remain clear. Avoid replacing connected reasoning with aphoristic fragments.
 
-1. **Trim the end** — cut trailing filler until the key idea is last.
-2. **Shift unimportant left** — move qualifiers earlier.
-3. **Shift important right** — restructure so new/complex information lands last.
-4. **Extract and isolate** — break a long sentence; put the key point in its own short sentence.
-5. **"What"/"It" constructions** — "What this means is X" throws emphasis on X.
-6. **Never end with metadiscourse** — move "it must be remembered" to the middle.
+Delete metadiscourse such as "it must be remembered" rather than moving it elsewhere. Make the substantive phenomenon the subject.
 
-## Managing Long Sentences
+## Modifiers and Summaries
 
-Length isn't the problem; shapelessness is. Three devices:
+Use a repeated noun or a short summary to connect clauses only when it has a clear antecedent and adds no new inference. A measurement does not license an invented claim about its mechanism, generality, or resistance to other methods.
 
-**Resumptive modifier** — repeat a key word, then elaborate:
-"...systems that address real deployment needs, *systems* that handle edge cases and recover gracefully."
+Attach participial modifiers to the actor that performs the action. Check that shortening a clause does not obscure who measured, caused, selected, or observed an outcome.
 
-**Summative modifier** — sum up, then continue:
-"...coverage dropped to 40%, *a gap* that no amount of prompt tuning could close."
+## Paragraph Repair
 
-**Free modifier** — participial phrase adding specificity:
-"The framework processes each field independently, *extracting* metadata from the source, *validating* it against the schema, *flagging* conflicts for human review."
+1. Identify the paragraph's supported core claim and put it first when this preserves meaning.
+2. Check each remaining sentence for evidence, explanation, qualification, or a necessary connection.
+3. Flag promises the paragraph does not support. Do not fill them with invented content.
+4. Read the revised paragraph with its neighbors and verify referents, terminology, scope, and uncertainty.
+5. Update the hit list and run the full protocol's section, evidence, terminology, punctuation, and self-reference checks.
 
-## Three-Step Paragraph Revision
-
-1. Look at the discussion: what themes does it actually develop? Revise the opening to announce those themes.
-2. Weave into the discussion whatever the opening promised but omitted.
-3. Delete from the opening whatever the discussion never develops.
-
-**Tip:** Your real point often appears in the paragraph's *last* sentence — where you finally figured out what you meant. If key terms appear there but not in the opening, move them up.
-
-## Academic Domain Notes
-
-- Preserve technical terms exactly. Don't "simplify" jargon that does real work.
-- Hedges are currency. "May," "suggests," "indicates" carry epistemic weight. Calibrate, don't eliminate.
-- If the author hedges a result, the revision must hedge at the same strength.
-- Don't vary word choice for the same concept. Readers think two words mean two concepts.
-
-## Revision Procedure
-
-1. Read once for overall meaning.
-2. Diagnose by feel: turgid? disjointed? flat?
-3. Underline subjects — are characters present? Are topics consistent?
-4. Circle nominalizations — can you turn them into verbs?
-5. Check sentence endings — does each end on its most important idea?
-6. Check paragraph openings — is there a POINT sentence?
-7. Cut redundancy, pompous diction, metadiscourse, negatives-for-affirmatives.
-8. Read aloud — if you stumble, rewrite.
+If a change would alter the argument or emphasis, retain the affected passage and flag the decision for the author.
