@@ -1,77 +1,98 @@
 # Academic Writing Skills
 
-Writing skills for formal, evidence-driven SE/ML research papers and technical chapters. Two versions: a full skill with progressive reference loading, and a compact, self-contained single-file version. Both include the complete twelve-failure prose repair protocol.
+Formal, evidence-driven writing for software engineering and machine learning papers, technical chapters, abstracts, and rebuttals. Both versions prefer active voice, concrete explanations, concise prose, and claims supported by evidence.
 
-Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex](https://openai.com/index/codex/), [Gemini](https://gemini.google.com/), and any agent that supports [agentskills.io](https://agentskills.io) SKILL.md format.
+Use with [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Codex](https://openai.com/index/codex/), [Gemini](https://gemini.google.com/), or another agent that supports the [Agent Skills format](https://agentskills.io).
 
-## What it covers
+See the [changelog](CHANGELOG.md) for the September 2026 prose-repair update and writing-guidance audit.
 
-- **38 core rules** across sentences, diction, paragraphs, architecture, citations, and tone
-- **12 prose failures** with detection patterns, fixes, and meaning-preservation safeguards
-- **5 global repair rules**: no em dashes, claim-first paragraphs and sections, prose/table separation, locally grounded empirical claims, and strict terminology with repeated shorthand glosses
-- **6-step repair procedure** with a complete hit list, repaired text, and verification reported separately
-- Sentence craft from Strunk & White and Joseph Williams' *Style: Toward Clarity and Grace*
-- Section architecture for empirical studies, audits, position papers, tool papers, and taxonomies
-- Logical rigor: claim types, causal language auditing, scope checking, burden-of-proof calibration
-- Context-sensitive wording diagnostics that preserve technical terms and avoid formulaic prose
-- Adversarial self-review with six dimensions, applicability checks, and a stop rule
-- Revision diagnostics for hidden actions, connected topics, clear referents, and preserved uncertainty
+## Writing preferences
 
-## Two versions
+- **Prefer active voice.** Name the known actor and use a direct verb. Keep passive voice only when needed; never invent an actor.
+- **Explain concretely.** Replace vague labels such as "this is structural" with the actual component, constraint, failure, or consequence.
+- **Avoid unsupported praise.** Replace general claims such as "robust" with the supported property or result. Preserve exact technical names such as "robust regression."
+- **Use no em dashes.** Restructure or use commas, colons, semicolons, or parentheses.
+- **Lead with the claim.** Every paragraph starts with its core claim, and every section opens with its core claim.
+- **Let prose interpret and tables enumerate.** Include the numbers needed for an interpretation without retelling a table.
+- **Ground empirical findings locally.** Restate the finding with its number and citation wherever used. Flag missing evidence rather than inventing it.
+- **Keep terminology consistent.** Define specialized terms at first use and add a 2-6 word gloss to every ID or shorthand used outside its definition.
 
-### `academic-writing/` (Full)
+During delivery-only repair, preserve meaning, argument, evidence, numbers, citations, scope, uncertainty, and emphasis. Flag changes that require an author decision. Do not force a chapter template onto a short paragraph or rebuttal.
 
-38 core rules in SKILL.md with 6 reference files. Load the prose repair protocol for every formal prose edit and before returning new drafts; load other references as needed.
+## Choose a version
+
+| Version | Contents | Best fit |
+|---|---|---|
+| [Full: academic-writing](academic-writing/SKILL.md) | 38 core rules, the complete repair protocol, and six references loaded when needed | Paper development, detailed review, and long documents |
+| [Compact: academic-writing-lite](academic-writing-lite/SKILL.md) | The same 38 core rules and complete repair protocol, plus concise wording and claim checks in one file | A self-contained installation with fewer supporting diagnostics |
+
+The compact version includes all twelve prose failures, all five global rules, and the full six-step repair procedure. It does not depend on the full version or a reference directory.
+
+### Full-version resources
 
 | File | Purpose |
 |---|---|
-| [SKILL.md](academic-writing/SKILL.md) | Core rules and workflow routing |
-| [references/prose-repair.md](academic-writing/references/prose-repair.md) | Five global rules, all twelve failures, six-step audit, separate deliverables |
-| [references/pre-writing-checklists.md](academic-writing/references/pre-writing-checklists.md) | Backward reasoning for five paper types |
-| [references/adversarial-review.md](academic-writing/references/adversarial-review.md) | Six-dimension self-review and claim-evidence mapping |
-| [references/logic-audit.md](academic-writing/references/logic-audit.md) | Inference checks, evidence calibration, and valid reasoning patterns |
-| [references/word-replacement-table.md](academic-writing/references/word-replacement-table.md) | Context-sensitive wording and technical-term safeguards |
-| [references/revision-guide.md](academic-writing/references/revision-guide.md) | Williams-based prose diagnosis and techniques |
+| [prose-repair.md](academic-writing/references/prose-repair.md) | Five global rules, twelve failures and fixes, six-step audit, separate deliverables |
+| [pre-writing-checklists.md](academic-writing/references/pre-writing-checklists.md) | Questions for five types of research contribution |
+| [adversarial-review.md](academic-writing/references/adversarial-review.md) | Six review dimensions with applicability checks and a stop rule |
+| [logic-audit.md](academic-writing/references/logic-audit.md) | Inference, evidence, scope, uncertainty, and reasoning checks |
+| [word-replacement-table.md](academic-writing/references/word-replacement-table.md) | Context-sensitive wording diagnostics that preserve technical meaning |
+| [revision-guide.md](academic-writing/references/revision-guide.md) | Active voice, hidden actions, information flow, and paragraph repair |
 
-### `academic-writing-lite/` (Compact)
+## Workflows and output
 
-Same 38 core rules and the complete prose repair protocol in a single file. Includes inline wording diagnostics and a claim review protocol. No reference directory or full-version installation needed.
+| Request | Expected behavior |
+|---|---|
+| Draft new prose | Develop the claims and evidence, use claim-first paragraphs, and check the global rules and twelve failures |
+| Polish or repair existing prose | Read the full supplied text before editing; return a hit list, complete repaired text, and verification separately |
+| Critique only | Report issues and recommendations without rewriting |
+| Develop the argument | Make substantive changes when requested and distinguish them from delivery-only repairs |
+
+For repair, the agent records each hit with its original location, ban number or global rule, proposed rewrite, and status. It then applies safe edits, rereads them in context, checks the first-sentence skim, and verifies evidence, terminology, punctuation, and self-references. It reports unresolved author decisions, unverified checks, and any retained navigation references.
+
+Example requests:
+
+- "Use academic-writing to repair this introduction without changing its claims."
+- "Use academic-writing-lite to tighten this paragraph; return only the revised text."
+- "Review this discussion for unsupported causal claims. Do not rewrite it."
+
+An explicit output request can shorten the report; it does not skip the repair audit.
 
 ## Installation
 
-To quickly install this skill, run:
+Use the installer:
 
 ```bash
 npx skills@latest add rgopikrishnan91/curious-aristotle-writing-skill
 ```
 
-If you prefer agent-specific instructions, check out below.
+For a manual installation, first clone the repository and enter its directory:
+
+```bash
+git clone https://github.com/rgopikrishnan91/curious-aristotle-writing-skill.git
+cd curious-aristotle-writing-skill
+```
+
+The commands below install the full version. Substitute `academic-writing-lite` for `academic-writing` to install the compact version.
 
 ### Claude Code
 
-**Full version (global):**
+Install globally:
+
 ```bash
 mkdir -p "$HOME/.claude/skills"
 cp -R academic-writing "$HOME/.claude/skills/"
 ```
 
-**Full version (project-level):**
-```bash
-mkdir -p .claude/skills
-cp -R academic-writing .claude/skills/
-```
-
-**Lite version:**
-```bash
-mkdir -p "$HOME/.claude/skills"
-cp -R academic-writing-lite "$HOME/.claude/skills/"
-```
+For a project installation, copy the selected skill folder into that project's `.claude/skills/` directory.
 
 ### Codex
 
+Use `CODEX_HOME` when set, with `$HOME/.codex` as the fallback:
+
 ```bash
-mkdir -p "$CODEX_HOME/skills"
-cp -R academic-writing "$CODEX_HOME/skills/"
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R academic-writing "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 ### Gemini
@@ -81,30 +102,26 @@ mkdir -p "$HOME/.gemini/skills"
 cp -R academic-writing "$HOME/.gemini/skills/"
 ```
 
-## Usage
+## Updating an existing installation
 
-Ask your agent to use the skill explicitly, or it will trigger automatically on writing-related requests:
+For a manual installation, run the following inside your repository clone:
 
-- "Revise this introduction"
-- "Make this paragraph flow better"
-- "Review my abstract for logical issues"
-- "Tighten this results section"
-- "Edit this draft using the academic-writing skill"
-- "Repair this formal chapter without changing its meaning; report every hit separately from the final text"
+```bash
+git pull --ff-only
+```
 
-Drafting, critique, substantive development, and delivery-only repair have different workflows. The skill does not impose a single chapter template on abstracts, rebuttals, or short paragraphs.
-
-For delivery-only edits, the agent reads the full supplied text before editing, records every hit with its original location and ban number, applies safe rewrites, rereads in context, checks paragraph and section openings, and verifies the repaired text. Missing evidence, undefined referents, and meaning-changing repairs are flagged for the author. Necessary navigation references are reported explicitly rather than hidden behind a claim of zero self-references.
+Then replace the installed skill folder with the corresponding updated folder from the clone, preserving any local customizations you need. Pulling the repository alone does not update a separately copied installation. The full version no longer uses `references/anti-patterns.md`; replacing the folder also removes that obsolete file.
 
 ## Sources
 
-Rules draw from:
+The guidance draws from:
+
 - Strunk & White, *The Elements of Style*
 - Joseph Williams, *Style: Toward Clarity and Grace*
-- Prof. Peng Sida's research paper writing notes (structural patterns)
-- [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) (vocabulary candidates, retained only where meaning is preserved)
-- Empirical SE reviewing and writing practice
+- Prof. Peng Sida's research paper writing notes
+- [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing), with vocabulary suggestions limited to changes that preserve meaning
+- Empirical software engineering reviewing and writing practice
 
 ## License
 
-MIT
+[MIT](LICENSE)
